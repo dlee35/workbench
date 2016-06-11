@@ -16,9 +16,10 @@ def get_rules_from_disk():
         raise RuntimeError('yara could not find yara rules directory under: %s' % my_dir)
 
     # Okay load in all the rules under the yara rule path
-    rules = yara.load_rules(rules_rootpath=yara_rule_path, fast_match=True)
+    # rules = yara.load_rules(rules_rootpath=yara_rule_path, fast_match=True)
 
-    return rules
+    # return rules
+    print "Yara rules are still disabled!"
 
 YARA_RULES = get_rules_from_disk()
 
