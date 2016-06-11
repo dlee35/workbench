@@ -32,7 +32,7 @@ class DataStore(object):
         # Get connection to mongo
         self.database_name = database
         self.uri = 'mongodb://'+uri+'/'+self.database_name
-        self.mongo = pymongo.MongoClient(self.uri, use_greenlets=True)
+        self.mongo = pymongo.MongoClient(self.uri)
         self.database = self.mongo.get_default_database()
 
         # Get the gridfs handle
